@@ -8,7 +8,6 @@ import java.nio.*;
 import java.util.*;
 import java.util.stream.*;
 
-
 /*
 	@author Joel&Eranus
 */
@@ -43,7 +42,7 @@ class STSServer
                     System.out.println("TO CLIENT: " + responce.toUpperCase());
                 }
             }
-            charTrack = 0;
+            //charTrack = 0;
             System.out.println("Done");
         }
     }

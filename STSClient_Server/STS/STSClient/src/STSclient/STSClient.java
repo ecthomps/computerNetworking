@@ -26,14 +26,14 @@ class STSClient
 
         printCommand(clientSocket);
 
-        while (true) {
+        while (true) {            
             System.out.print("Command: ");
             userInput = inputFromUser.readLine(); 
             outputToServer.writeBytes(userInput + '\n');
 
             String[] splitted = userInput.trim().split(" ");
             
-        if(endCmd.equals(userInput) || nullInput.equals(userInput)){
+        if(nullInput.equals(userInput)){ 
             
             break;
                 }else
@@ -41,6 +41,7 @@ class STSClient
                 serverResponce = inputFromServer.readLine();
                 System.out.println(serverResponce);
             }
+        //System.out.println("-1");
         } 
        
         clientSocket.close();
